@@ -2,7 +2,7 @@
 
 # Usage: ./deploy.sh [host]
 
-host="${1:-ryan@ramnode.mut8ed.com}"
+host="${1:-ryan@172.16.245.132}"
 
 # The host key might change when we instantiate a new VM, so
 # we remove (-R) the old host key from known_hosts
