@@ -4,6 +4,7 @@ node['mongodb']['replSet']   = "mut8ed"
 
 package 'git'
 package 'nginx'
+package 'python-software-properties'
 
 include_recipe "apt"
 include_recipe "nodejs::install_from_package"
