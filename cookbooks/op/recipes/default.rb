@@ -66,6 +66,7 @@ node['firewall']['rules'] = [
 include_recipe "ufw"
 
 ## nginx templates
+
 template '/etc/nginx/sites-enabled/80' do
   source "nginx-80.erb"
   owner "root"
@@ -81,13 +82,20 @@ template '/etc/nginx/sites-enabled/go' do
 end
 
 cookbook_file '/etc/nginx/sites-enabled/default' do
-	action :delete
+  action :delete
 end
 
 execute "reload" do
   command "sudo service nginx reload"
 end
 
+## upstart ##
 
+template '/etc/init/server.conf' do
+  source "upstart-server.erb"
+  owner "root"
+  group "root"
+  mode 00644
+end
 
 
