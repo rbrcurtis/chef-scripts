@@ -98,4 +98,30 @@ template '/etc/init/server.conf' do
   mode 00644
 end
 
+service "server" do
+  action :start
+end
+
+template '/etc/init/ai.conf' do
+  source "upstart-ai.erb"
+  owner "root"
+  group "root"
+  mode 00644
+end
+
+service "ai" do
+  action :start
+end
+
+template '/etc/init/notifier.conf' do
+  source "upstart-notifier.erb"
+  owner "root"
+  group "root"
+  mode 00644
+end
+
+service "notifier" do
+  action :start
+end
+
 
