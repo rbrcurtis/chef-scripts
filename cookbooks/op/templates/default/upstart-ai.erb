@@ -1,0 +1,26 @@
+description     "ai player"
+
+start on runlevel [2345]
+stop on runlevel [!2345]
+
+expect fork
+respawn
+
+env procpath=/home/go/server
+env proc=ai
+env logfile=/var/log/go/ai.log
+
+pre-start script
+        mkdir -p /var/log/go/
+        chown go:go /var/log/go/
+        echo `date`" - [go $proc] started" >> $logfile
+end script
+
+script
+        start-stop-daemon --name bb-$proc --start --quiet --chuid go --chdir $procpath --exec $procpath/go -- $proc >>$logfile 2>&1 &
+        set -x
+end script
+
+post-stop script
+        echo `date`" - $proc stopped" >> $logfile
+end script
