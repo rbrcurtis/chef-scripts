@@ -14,6 +14,10 @@ port = <%= @port %>
 replSet = <%= @replSet %>
 <% end %>
 
+<% if node['mongodb']['bind_ip'] %>
+bind_ip = <%= node['mongodb']['bind_ip'] %>
+<% end %>
+
 verbose = <%= node['mongodb']['log_verbose'] %>
 cpu = <%= node['mongodb']['log_cpu'] %>
 rest = <%= node['mongodb']['enable_rest'] %>
