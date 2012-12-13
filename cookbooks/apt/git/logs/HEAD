@@ -1,3 +1,0 @@
-0000000000000000000000000000000000000000 3ed5b8956598bebf0a5e5227e1b97a38a44b1dc3 Ryan Curtis <rbrcurtis@gmail.com> 1355342931 -0500	clone: from git://github.com/opscode-cookbooks/apt.git
-3ed5b8956598bebf0a5e5227e1b97a38a44b1dc3 8529bd1778acfff1e32e28271662febb1328474d Ryan Curtis <rbrcurtis@gmail.com> 1355342970 -0500	checkout: moving from master to 1.4.8
-8529bd1778acfff1e32e28271662febb1328474d c5332257e0f3ea7891ded9f1ff275ffee05a0b77 Ryan Curtis <rbrcurtis@gmail.com> 1355342988 -0500	checkout: moving from 8529bd1778acfff1e32e28271662febb1328474d to 1.4.2
